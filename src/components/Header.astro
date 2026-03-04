@@ -1,0 +1,164 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/contact', label: 'Contact' },
+];
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a href="/" class="logo">
+      <span class="logo-main">Sadra</span>
+      <span class="logo-sub">Construction</span>
+    </a>
+
+    <nav class="nav-desktop">
+      {navLinks.map(link => (
+        <a href={link.href} class={`nav-link ${currentPath === link.href ? 'active' : ''}`}>
+          {link.label}
+        </a>
+      ))}
+      <a href="/contact" class="btn btn-filled nav-cta">Free Estimate</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="nav-mobile" id="mobileNav">
+    {navLinks.map(link => (
+      <a href={link.href} class="mobile-link">{link.label}</a>
+    ))}
+    <a href="/contact" class="btn btn-filled mobile-cta">Free Estimate</a>
+  </nav>
+</header>
+
+<style>
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(245, 240, 232, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184, 149, 42, 0.2);
+  transition: box-shadow 0.3s;
+}
+.site-header.scrolled {
+  box-shadow: 0 2px 30px rgba(44,44,44,0.08);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-main {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  letter-spacing: 0.05em;
+}
+.logo-sub {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.nav-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--charcoal-light);
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--brass);
+  transition: width 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--brass);
+}
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+.nav-cta { margin-left: 0.5rem; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--charcoal);
+  transition: all 0.3s;
+}
+
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2rem;
+  gap: 1rem;
+  border-top: 1px solid var(--warm-white-2);
+  background: var(--warm-white);
+}
+.mobile-link {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--charcoal);
+  padding: 0.4rem 0;
+}
+.mobile-cta { align-self: flex-start; margin-top: 0.5rem; }
+
+.nav-mobile.open { display: flex; }
+
+@media (max-width: 768px) {
+  .nav-desktop { display: none; }
+  .nav-toggle { display: flex; }
+}
+</style>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  toggle?.addEventListener('click', () => mobileNav?.classList.toggle('open'));
+
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    header?.classList.toggle('scrolled', window.scrollY > 20);
+  });
+</script>

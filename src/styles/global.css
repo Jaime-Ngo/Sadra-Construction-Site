@@ -1,0 +1,89 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: #F5F0E8;
+  color: #2C2C2C;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 80px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+a { color: inherit; text-decoration: none; }
+
+img { max-width: 100%; display: block; }
+
+:root {
+  --warm-white: #F5F0E8;
+  --warm-white-2: #EDE6D6;
+  --charcoal: #2C2C2C;
+  --charcoal-light: #4A4A4A;
+  --brass: #B8952A;
+  --brass-light: #D4AF5A;
+  --brass-pale: #F0E6C8;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Jost', sans-serif;
+}
+
+.section-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #B8952A;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.25rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid #B8952A;
+  color: #B8952A;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #B8952A;
+  color: #F5F0E8;
+}
+.btn-filled {
+  background: #B8952A;
+  color: #F5F0E8;
+}
+.btn-filled:hover {
+  background: #D4AF5A;
+  border-color: #D4AF5A;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background: #B8952A;
+  margin: 1.5rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}

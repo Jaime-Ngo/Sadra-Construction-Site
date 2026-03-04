@@ -1,0 +1,699 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const beforeAfterProjects = [
+  {
+    id: 1,
+    title: 'Commercial Office Build-Out',
+    category: 'Commercial',
+    location: 'Los Angeles',
+    desc: 'Full interior build-out from raw framing to a polished conference room with custom walnut millwork, marble table, and coffered ceiling lighting.',
+    before: '/portfolio/before-project-1.jpeg',
+    after: '/portfolio/after-project-1.jpeg',
+  },
+  {
+    id: 2,
+    title: 'Exterior Renovation',
+    category: 'Exterior',
+    location: 'Greater Los Angeles',
+    desc: 'Complete exterior transformation: new facade, masonry, and curb appeal upgrade from dated brick to a modern finished exterior.',
+    before: '/portfolio/before-project-2.jpeg',
+    after: '/portfolio/after-project-2.jpeg',
+  },
+  {
+    id: 3,
+    title: 'Marble Bathroom Remodel',
+    category: 'Bathroom',
+    location: 'Los Angeles',
+    desc: 'Gut renovation of a dated bathroom into a crisp, spa-inspired space with full marble tile shower, custom vanity, and hexagon floor tile.',
+    before: '/portfolio/before-project-3.jpeg',
+    after: '/portfolio/after-project-3.png',
+  },
+  {
+    id: 4,
+    title: 'Kitchen Remodel',
+    category: 'Kitchen',
+    location: 'San Fernando Valley',
+    desc: 'From bare framing to a bright white shaker kitchen with quartz countertops, brass hardware, and all-new stainless appliances.',
+    before: '/portfolio/before-project-4.jpeg',
+    after: '/portfolio/after-project-4.jpeg',
+  },
+  {
+    id: 5,
+    title: 'Concrete Porch & Entry',
+    category: 'Exterior',
+    location: 'Los Angeles',
+    desc: 'Engineered concrete forming and pour resulting in a sleek, modern front porch and entry staircase with clean architectural lines.',
+    before: '/portfolio/before-project-5.jpeg',
+    after: '/portfolio/after-project-5.jpeg',
+  },
+];
+
+const photoProjects = [
+  {
+    id: 'p1',
+    title: 'Luxury Master Bathroom',
+    category: 'Bathroom',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-1.jpeg',
+  },
+  {
+    id: 'p2',
+    title: 'White Kitchen with Brass Accents',
+    category: 'Kitchen',
+    location: 'San Fernando Valley',
+    photo: '/portfolio/photo-2.jpeg',
+  },
+  {
+    id: 'p3',
+    title: 'Marble Shower Tile',
+    category: 'Tile & Stone',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-3.jpeg',
+  },
+  {
+    id: 'p4',
+    title: 'Modern Bathroom Remodel',
+    category: 'Bathroom',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-4.jpeg',
+  },
+  {
+    id: 'p5',
+    title: 'Brass Pot Filler & Herringbone Backsplash',
+    category: 'Kitchen',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-5.jpeg',
+  },
+  {
+    id: 'p6',
+    title: 'Custom Reception & Millwork',
+    category: 'Commercial',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-6.jpeg',
+  },
+  {
+    id: 'p7',
+    title: 'Custom Cabinetry',
+    category: 'Custom Cabinetry',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-7.jpeg',
+  },
+  {
+    id: 'p8',
+    title: 'Flat Roof Installation',
+    category: 'Roofing',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-8.jpeg',
+  },
+  {
+    id: 'p9',
+    title: 'Marble Tub Surround',
+    category: 'Bathroom',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-9.jpeg',
+  },
+  {
+    id: 'p10',
+    title: 'Architectural Lighting & Hallway',
+    category: 'Interior',
+    location: 'Los Angeles',
+    photo: '/portfolio/photo-10.jpeg',
+  },
+];
+---
+
+<Layout title="Portfolio" description="Before and after kitchen, bathroom, and construction projects by Sadra Construction in Los Angeles.">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content container">
+      <p class="section-label" style="color:var(--brass-light)">Our Work</p>
+      <h1>Portfolio</h1>
+      <p>Real transformations across Greater Los Angeles & the San Fernando Valley.</p>
+    </div>
+  </section>
+
+  <!-- BEFORE & AFTER -->
+  <section class="ba-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">The Full Picture</p>
+        <h2>Before & After</h2>
+        <p class="section-sub">See the complete transformation — from demo day to the finished result.</p>
+      </div>
+
+      <div class="ba-grid">
+        {beforeAfterProjects.map(project => (
+          <div class="ba-card" data-category={project.category}>
+            <div class="ba-images">
+              <div class="ba-side">
+                <img src={project.before} alt={`Before: ${project.title}`} />
+                <span class="ba-label before-lbl">Before</span>
+              </div>
+              <div class="ba-divider">
+                <div class="ba-divider-line"></div>
+                <div class="ba-divider-icon">↔</div>
+              </div>
+              <div class="ba-side">
+                <img src={project.after} alt={`After: ${project.title}`} />
+                <span class="ba-label after-lbl">After</span>
+              </div>
+            </div>
+            <div class="ba-body">
+              <div class="ba-meta">
+                <span class="ba-category">{project.category}</span>
+                <span class="ba-location">{project.location}</span>
+              </div>
+              <h3>{project.title}</h3>
+              <p>{project.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLETED WORK GALLERY -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Completed Work</p>
+        <h2>More From Our Portfolio</h2>
+        <p class="section-sub">A selection of finished projects showcasing our craftsmanship across Los Angeles.</p>
+      </div>
+
+      <div class="photo-grid">
+        {photoProjects.map(p => (
+          <div class="photo-card" data-category={p.category}>
+            <div class="photo-img">
+              <img src={p.photo} alt={p.title} />
+              <div class="photo-overlay">
+                <span class="photo-category">{p.category}</span>
+                <span class="photo-title">{p.title}</span>
+                <span class="photo-location">{p.location}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-content container">
+      <p class="section-label" style="color:var(--brass-light); text-align:center">Your Project Awaits</p>
+      <h2 style="text-align:center; color:var(--warm-white)">Ready for Your Own<br/><em>Transformation?</em></h2>
+      <p>Schedule a free in-home consultation today. Serving Greater Los Angeles and the San Fernando Valley.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-filled">Get a Free Estimate</a>
+        <a href="tel:3109226623" class="btn" style="border-color:rgba(245,240,232,0.5); color:var(--warm-white)">310.922.6623</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">‹</button>
+    <button class="lightbox-next" id="lightboxNext">›</button>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  
+  <style>
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .lightbox.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 18, 15, 0.95);
+    cursor: pointer;
+  }
+  .lightbox-img-wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox-img-wrap img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    display: block;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    transition: opacity 0.2s ease;
+  }
+  .lightbox-caption {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    color: rgba(245,240,232,0.7);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 4;
+    background: none;
+    border: 1px solid rgba(245,240,232,0.25);
+    color: rgba(245,240,232,0.7);
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .lightbox-close:hover {
+    border-color: var(--brass);
+    color: var(--brass);
+  }
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    background: none;
+    border: 1px solid rgba(245,240,232,0.2);
+    color: rgba(245,240,232,0.7);
+    font-size: 2rem;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    line-height: 1;
+  }
+  .lightbox-prev { left: 2rem; }
+  .lightbox-next { right: 2rem; }
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    border-color: var(--brass);
+    color: var(--brass);
+  }
+  </style>
+  
+  <script>
+    // Collect all clickable images
+    const allImages: { src: string; caption: string }[] = [];
+  
+    // Before/After sides
+    document.querySelectorAll('.ba-side img').forEach((img) => {
+      const label = img.closest('.ba-side')?.querySelector('.ba-label')?.textContent ?? '';
+      const title = img.closest('.ba-card')?.querySelector('h3')?.textContent ?? '';
+      allImages.push({ src: (img as HTMLImageElement).src, caption: `${title} — ${label}` });
+    });
+  
+    // Photo gallery cards
+    document.querySelectorAll('.photo-card img').forEach((img) => {
+      const title = img.closest('.photo-card')?.querySelector('.photo-title')?.textContent ?? '';
+      allImages.push({ src: (img as HTMLImageElement).src, caption: title });
+    });
+  
+    // Make clickable
+    document.querySelectorAll('.ba-side, .photo-card').forEach((el) => {
+      (el as HTMLElement).style.cursor = 'zoom-in';
+      el.addEventListener('click', () => {
+        const img = el.querySelector('img') as HTMLImageElement;
+        const label = el.querySelector('.ba-label')?.textContent ?? '';
+        const title =
+          el.querySelector('.photo-title')?.textContent ??
+          el.closest('.ba-card')?.querySelector('h3')?.textContent ?? '';
+        const caption = label ? `${title} — ${label}` : title;
+        openLightbox(img.src, caption);
+      });
+    });
+  
+    let currentIndex = 0;
+  
+    function openLightbox(src: string, caption: string) {
+      currentIndex = allImages.findIndex(i => i.src === src);
+      const lb = document.getElementById('lightbox')!;
+      const lbImg = document.getElementById('lightboxImg') as HTMLImageElement;
+      const lbCap = document.getElementById('lightboxCaption')!;
+      lbImg.src = src;
+      lbCap.textContent = caption;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closeLightbox() {
+      document.getElementById('lightbox')!.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  
+    function navigate(dir: number) {
+      currentIndex = (currentIndex + dir + allImages.length) % allImages.length;
+      const lbImg = document.getElementById('lightboxImg') as HTMLImageElement;
+      const lbCap = document.getElementById('lightboxCaption')!;
+      lbImg.style.opacity = '0';
+      setTimeout(() => {
+        lbImg.src = allImages[currentIndex].src;
+        lbCap.textContent = allImages[currentIndex].caption;
+        lbImg.style.opacity = '1';
+      }, 150);
+    }
+  
+    document.getElementById('lightboxClose')!.addEventListener('click', closeLightbox);
+    document.getElementById('lightboxBackdrop')!.addEventListener('click', closeLightbox);
+    document.getElementById('lightboxPrev')!.addEventListener('click', () => navigate(-1));
+    document.getElementById('lightboxNext')!.addEventListener('click', () => navigate(1));
+  
+    document.addEventListener('keydown', (e) => {
+      if (!document.getElementById('lightbox')!.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  </script>
+</Layout>
+
+<style>
+/* HERO */
+.page-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #3a3530 60%, #2a2520 100%);
+}
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,44,44,0.5);
+}
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+.page-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--warm-white);
+  margin: 0.5rem 0;
+}
+.page-hero-content p {
+  color: rgba(245,240,232,0.7);
+  font-size: 1rem;
+}
+
+/* SECTION HEADERS */
+.section-header {
+  margin-bottom: 3.5rem;
+}
+.section-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+.section-sub {
+  font-size: 0.95rem;
+  color: var(--charcoal-light);
+  max-width: 560px;
+}
+
+/* BEFORE & AFTER SECTION */
+.ba-section {
+  padding: 7rem 0;
+  background: var(--warm-white);
+}
+.ba-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.ba-card {
+  background: var(--warm-white-2);
+  overflow: hidden;
+}
+.ba-images {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  height: 420px;
+  position: relative;
+}
+.ba-side {
+  position: relative;
+  overflow: hidden;
+}
+.ba-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.ba-card:hover .ba-side img {
+  transform: scale(1.03);
+}
+.ba-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.75rem;
+  z-index: 2;
+}
+.before-lbl {
+  background: rgba(44,44,44,0.8);
+  color: var(--warm-white);
+}
+.after-lbl {
+  background: var(--brass);
+  color: var(--warm-white);
+}
+.ba-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--warm-white-2);
+  position: relative;
+  z-index: 3;
+}
+.ba-divider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--brass);
+}
+.ba-divider-icon {
+  background: var(--brass);
+  color: var(--warm-white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  position: relative;
+  z-index: 4;
+  flex-shrink: 0;
+}
+.ba-body {
+  padding: 2rem 2.5rem;
+}
+.ba-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.ba-category {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 600;
+}
+.ba-location {
+  font-size: 0.78rem;
+  color: var(--charcoal-light);
+}
+.ba-body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.ba-body p {
+  font-size: 0.88rem;
+  color: var(--charcoal-light);
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* PHOTO GALLERY */
+.gallery-section {
+  padding: 7rem 0;
+  background: var(--warm-white-2);
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 320px;
+  gap: 1rem;
+}
+/* Make some cards taller for visual interest */
+.photo-card:nth-child(1),
+.photo-card:nth-child(6),
+.photo-card:nth-child(9) {
+  grid-row: span 2;
+}
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.photo-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+.photo-card:hover .photo-img img {
+  transform: scale(1.05);
+}
+.photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(44,44,44,0.88) 0%, transparent 100%);
+  padding: 2rem 1.5rem 1.25rem;
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.photo-card:hover .photo-overlay {
+  transform: translateY(0);
+}
+.photo-category {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+  font-weight: 600;
+}
+.photo-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--warm-white);
+}
+.photo-location {
+  font-size: 0.75rem;
+  color: rgba(245,240,232,0.6);
+}
+
+/* CTA */
+.cta-banner {
+  background: var(--charcoal);
+  padding: 7rem 0;
+  text-align: center;
+}
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--warm-white);
+  margin: 0.5rem 0 1.5rem;
+}
+.cta-content h2 em { color: var(--brass-light); font-style: italic; }
+.cta-content p {
+  color: rgba(245,240,232,0.6);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  font-size: 0.95rem;
+}
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 260px;
+  }
+  .photo-card:nth-child(1),
+  .photo-card:nth-child(6),
+  .photo-card:nth-child(9) {
+    grid-row: span 1;
+  }
+  .ba-images { height: 280px; }
+}
+@media (max-width: 600px) {
+  .ba-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 24px 1fr;
+    height: 520px;
+  }
+  .ba-divider {
+    flex-direction: row;
+  }
+  .ba-divider-line {
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    bottom: auto;
+  }
+  .photo-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+  .photo-overlay { transform: translateY(0); }
+}
+</style>

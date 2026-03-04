@@ -1,0 +1,133 @@
+---
+---
+
+<footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-main">Sadra</span>
+          <span class="logo-sub">Construction</span>
+        </div>
+        <p class="tagline">Refined craftsmanship for<br/>discerning homeowners.</p>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
+      </div>
+  
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="/services#kitchens">Kitchen Remodels</a>
+        <a href="/services#bathrooms">Bathroom Remodels</a>
+        <a href="/services#custom">Custom Cabinetry</a>
+        <a href="/services#tile">Tile & Stonework</a>
+      </div>
+  
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Greater Los Angeles<br/>& The San Fernando Valley</p>
+        <a href="tel:3109226623" class="contact-link">310.922.6623</a>
+        <a href="mailto:david@sadraconstruction.com" class="contact-link">david@sadraconstruction.com</a>
+        <a href="/contact" class="btn" style="margin-top:1rem;">Free Estimate</a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom container">
+      <p>&copy; {new Date().getFullYear()} Sadra Construction. All rights reserved.</p>
+      <p>Licensed & Insured · Greater Los Angeles, CA</p>
+    </div>
+  </footer>
+  
+  <style>
+  .site-footer {
+    background: var(--charcoal);
+    color: rgba(245, 240, 232, 0.75);
+    margin-top: 0;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    padding: 5rem 2rem 4rem;
+  }
+  .footer-brand .logo { margin-bottom: 1.2rem; }
+  .footer-brand .logo-main {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--warm-white);
+    display: block;
+  }
+  .footer-brand .logo-sub {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    display: block;
+  }
+  .tagline {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(245,240,232,0.55);
+    font-style: italic;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+  }
+  .footer-links h4, .footer-contact h4 {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--brass-light);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-links a {
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.65);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--brass-light); }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .footer-contact p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+  }
+  .contact-link {
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.65);
+    transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--brass-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(245,240,232,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 900px) {
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 560px) {
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+  </style>

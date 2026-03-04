@@ -1,0 +1,263 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Services" description="Sadra Construction offers luxury kitchen and bathroom remodeling in Greater Los Angeles.">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content container">
+      <p class="section-label" style="color:var(--brass-light)">What We Offer</p>
+      <h1>Our Services</h1>
+      <p>Expert remodeling services for the most important rooms in your home.</p>
+    </div>
+  </section>
+
+  <!-- KITCHENS -->
+  <section class="service-detail" id="kitchens">
+    <div class="container">
+      <div class="service-detail-inner">
+        <div class="service-detail-image-wrap">
+            <img src="/services/kitchen.jpeg" alt="Kitchen remodel by Sadra Construction" />
+          </div>
+        <div class="service-detail-text">
+          <p class="section-label">Signature Service</p>
+          <h2>Kitchen Remodeling</h2>
+          <div class="divider"></div>
+          <p>The kitchen is the heart of your home and we treat it that way. From full gut renovations to thoughtful updates, Sadra Construction delivers kitchens that are as functional as they are beautiful.</p>
+          <ul class="service-list">
+            <li>Custom cabinetry & millwork</li>
+            <li>Quartz, marble & granite countertops</li>
+            <li>Island design & construction</li>
+            <li>Premium appliance integration</li>
+            <li>Lighting & electrical upgrades</li>
+            <li>Backsplash tile & stonework</li>
+            <li>Hardwood & tile flooring</li>
+          </ul>
+          <a href="/contact" class="btn btn-filled" style="margin-top:2rem;">Start Your Kitchen Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BATHROOMS -->
+  <section class="service-detail alt" id="bathrooms">
+    <div class="container">
+      <div class="service-detail-inner reverse">
+        <div class="service-detail-image-wrap">
+            <img src="/services/bathroom.jpeg" alt="Bathroom remodel by Sadra Construction" />
+          </div>
+        <div class="service-detail-text">
+          <p class="section-label">Signature Service</p>
+          <h2>Bathroom Remodeling</h2>
+          <div class="divider"></div>
+          <p>Transform your bathroom into a sanctuary. Whether it's a spa-inspired master bath or a refined powder room, we bring precision craftsmanship to every square inch.</p>
+          <ul class="service-list">
+            <li>Walk-in shower design & tile</li>
+            <li>Freestanding & built-in tub installation</li>
+            <li>Custom vanities & cabinetry</li>
+            <li>Stone & tile floors & walls</li>
+            <li>Steam shower systems</li>
+            <li>Radiant floor heating</li>
+            <li>Plumbing & fixture upgrades</li>
+          </ul>
+          <a href="/contact" class="btn btn-filled" style="margin-top:2rem;">Start Your Bathroom Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TILE & CUSTOM -->
+  <section class="service-detail" id="tile">
+    <div class="container">
+      <div class="service-detail-inner">
+        <div class="service-detail-image-wrap">
+            <img src="/services/tiles.jpeg" alt="Tile and stonework by Sadra Construction" />
+          </div>
+        <div class="service-detail-text">
+          <p class="section-label">Craftsmanship</p>
+          <h2>Tile, Stone &<br/>Custom Cabinetry</h2>
+          <div class="divider"></div>
+          <p>The details define a great remodel. Our artisan tile setters and custom cabinet makers bring decades of expertise to your project.</p>
+          <ul class="service-list">
+            <li>Natural stone countertops & surfaces</li>
+            <li>Decorative & large-format tile installation</li>
+            <li>Mosaic & accent walls</li>
+            <li>Built-in shelving & storage</li>
+            <li>Custom painted & stained cabinetry</li>
+            <li>Hardware & fixture selection assistance</li>
+          </ul>
+          <a href="/contact" class="btn btn-filled" style="margin-top:2rem;">Discuss Your Vision</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header" style="text-align:center; margin-bottom:4rem;">
+        <p class="section-label">How It Works</p>
+        <h2>Our Process</h2>
+      </div>
+      <div class="process-steps">
+        {[
+          { num: '01', title: 'Free Consultation', desc: 'We visit your home, understand your vision, and assess the scope.' },
+          { num: '02', title: 'Design & Planning', desc: 'We create a detailed plan, material selections, and a transparent itemized estimate.' },
+          { num: '03', title: 'Expert Construction', desc: 'Our licensed team executes your project with precision, keeping you informed every step of the way.' },
+          { num: '04', title: 'Final Walkthrough', desc: 'We review every detail together and don\'t consider a job done until you\'re completely satisfied.' },
+        ].map(step => (
+          <div class="process-step">
+            <span class="step-num">{step.num}</span>
+            <h3>{step.title}</h3>
+            <p>{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-content container">
+      <p class="section-label" style="color:var(--brass-light); text-align:center">Let's Get Started</p>
+      <h2 style="text-align:center; color:var(--warm-white)">Ready to Transform<br/><em>Your Space?</em></h2>
+      <p style="text-align:center">Call us at <a href="tel:3109226623" style="color:var(--brass-light)">310.922.6623</a> or schedule your free estimate online.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-filled">Book a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.page-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+}
+.page-hero-bg { position: absolute; inset: 0; background: var(--charcoal); }
+.page-hero-placeholder {
+  width:100%; height:100%;
+  background: linear-gradient(135deg, #1a1a1a, #3a3530);
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(255,255,255,0.2); font-size:0.8rem; letter-spacing:0.1em;
+}
+.page-hero-overlay { position:absolute; inset:0; background:rgba(44,44,44,0.6); }
+.page-hero-content {
+  position: relative; z-index: 2;
+}
+.page-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--warm-white);
+  margin: 0.5rem 0;
+}
+.page-hero-content p {
+  color: rgba(245,240,232,0.7);
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+.service-detail { padding: 7rem 0; background: var(--warm-white); }
+.service-detail.alt { background: var(--warm-white-2); }
+.service-detail-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.service-detail-inner.reverse { direction: rtl; }
+.service-detail-inner.reverse > * { direction: ltr; }
+
+.service-detail-image-wrap {
+  height: 420px;
+  overflow: hidden;
+}
+.service-detail-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.service-detail-image-wrap:hover img {
+  transform: scale(1.03);
+}
+.service-detail-text h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 0; }
+.service-detail-text p { font-size: 0.92rem; color: var(--charcoal-light); }
+.service-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.service-list li {
+  font-size: 0.85rem;
+  color: var(--charcoal-light);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.service-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--brass);
+  font-size: 0.75rem;
+}
+
+.process { padding: 7rem 0; background: var(--charcoal); }
+.process .section-label { color: var(--brass-light); }
+.process h2 { color: var(--warm-white); font-size: clamp(1.8rem, 3vw, 2.8rem); }
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.process-step {
+  padding: 2.5rem 1.5rem;
+  border: 1px solid rgba(245,240,232,0.1);
+  position: relative;
+}
+.step-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: rgba(184,149,42,0.25);
+  display: block;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.process-step h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--warm-white);
+  margin-bottom: 0.75rem;
+}
+.process-step p {
+  font-size: 0.85rem;
+  color: rgba(245,240,232,0.55);
+  line-height: 1.7;
+}
+
+.cta-banner { background: var(--charcoal); padding: 7rem 0; }
+.cta-content p { color:rgba(245,240,232,0.6); max-width:520px; margin:0 auto 2.5rem; font-size:0.95rem; }
+.cta-actions { display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:2rem; }
+
+@media (max-width: 900px) {
+  .service-detail-inner, .service-detail-inner.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .service-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .process-steps { grid-template-columns: 1fr; }
+}
+</style>

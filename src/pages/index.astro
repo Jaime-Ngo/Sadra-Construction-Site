@@ -1,11 +1,468 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- Replace with: <img src="/images/hero-kitchen.jpg" alt="Luxury kitchen remodel" /> -->
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="section-label" style="color: var(--brass-light)">Greater Los Angeles & The Valley</p>
+      <h1>Where Homes<br/><em>Become Havens.</em></h1>
+      <p class="hero-sub">Bespoke kitchen & bathroom remodeling<br/>for the discerning Los Angeles homeowner.</p>
+      <div class="hero-actions">
+        <a href="/portfolio" class="btn btn-filled">View Our Work</a>
+        <a href="/contact" class="btn" style="border-color:rgba(245,240,232,0.6); color:var(--warm-white)">Get a Free Estimate</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-inner container">
+      <div class="intro-text">
+        <p class="section-label">Our Philosophy</p>
+        <h2>Crafted with<br/>Intention.</h2>
+        <div class="divider"></div>
+        <p>Sadra Construction brings artisan-level craftsmanship to every kitchen and bathroom remodel across Greater Los Angeles. We believe your home should reflect your life: refined, functional, and unforgettable.</p>
+        <p style="margin-top:1rem;">From concept to completion, we handle every detail with care — so you can simply enjoy the transformation.</p>
+        <a href="/services" class="btn" style="margin-top:2rem;">Explore Services</a>
+      </div>
+      <div class="intro-stats">
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">300+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Licensed & Insured</span>
+        </div>
+		<div class="intro-image">
+			<img src="/home/home-philosophy.jpeg" alt="Craftsmanship detail — Sadra Construction" />
+		  </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+	<div class="container">
+	  <div class="section-header">
+		<p class="section-label">What We Do</p>
+		<h2>Specializing in the<br/>Spaces That Matter Most.</h2>
+	  </div>
+	  <div class="services-grid">
+		<div class="service-card">
+		  <div class="service-img">
+			<img src="/home/kitchen-remodel-home.jpeg" alt="Kitchen remodel by Sadra Construction" />
+		  </div>
+		  <div class="service-body">
+			<h3>Kitchen Remodeling</h3>
+			<p>From full gut renovations to refined updates — custom cabinetry, island design, premium countertops, and everything in between.</p>
+			<a href="/services#kitchens" class="card-link">Learn More →</a>
+		  </div>
+		</div>
+		<div class="service-card">
+		  <div class="service-img">
+			<img src="/home/bathroom-remodel-home.jpeg" alt="Bathroom remodel by Sadra Construction" />
+		  </div>
+		  <div class="service-body">
+			<h3>Bathroom Remodeling</h3>
+			<p>Spa-inspired master baths, elegant powder rooms, and everything in between — designed and built with precision.</p>
+			<a href="/services#bathrooms" class="card-link">Learn More →</a>
+		  </div>
+		</div>
+		<div class="service-card">
+		  <div class="service-img">
+			<img src="/home/tile-remodel-home.jpeg" alt="Tile and stonework by Sadra Construction" />
+		  </div>
+		  <div class="service-body">
+			<h3>Tile & Stonework</h3>
+			<p>Artisan tile installation, custom stone countertops, and natural material sourcing for a truly bespoke finish.</p>
+			<a href="/services#tile" class="card-link">Learn More →</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- PORTFOLIO TEASER -->
+
+<section class="portfolio-teaser">
+	<div class="container">
+	  <div class="section-header">
+		<p class="section-label">Our Work</p>
+		<h2>Recent Transformations.</h2>
+	  </div>
+	  <div class="portfolio-grid">
+		<div class="portfolio-item large">
+		  <img src="/portfolio/photo-2.jpeg" alt="White kitchen with brass pendants" />
+		  <div class="port-overlay">
+			<span>Kitchen Remodel — San Fernando Valley</span>
+		  </div>
+		</div>
+		<div class="portfolio-item">
+		  <img src="/portfolio/photo-1.jpeg" alt="Luxury master bathroom" />
+		  <div class="port-overlay"><span>Luxury Master Bath — Los Angeles</span></div>
+		</div>
+		<div class="portfolio-item">
+		  <img src="/portfolio/after-project-3.png" alt="Marble bathroom remodel" />
+		  <div class="port-overlay"><span>Marble Bathroom Remodel</span></div>
+		</div>
+
+	  </div>
+	  <div class="portfolio-cta">
+		<a href="/portfolio" class="btn btn-filled">View Full Portfolio</a>
+	  </div>
+	</div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <p class="section-label" style="text-align:center">What Our Clients Say</p>
+      <h2 style="text-align:center; margin-bottom:3rem;">Trusted Across Los Angeles.</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Sadra Construction did an amazing job with our kitchen! David and his team were professional and every detail was considered."</p>
+          <span class="testimonial-author">— M. Harriet, Sherman Oaks</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The tile work done our bathroom alone was worth every penny. We couldn't be happier."</p>
+          <span class="testimonial-author">— T. Beckmann, Encino</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Sadra Construction's prices were within budget and my husband and I could not be happier with how our kitchen turned out! They are the only remodeling company we'll ever use."</p>
+          <span class="testimonial-author">— J. Sato, Brentwood</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-content container">
+      <p class="section-label" style="color:var(--brass-light)">Ready to Begin?</p>
+      <h2>Let's Build Something<br/><em>Extraordinary.</em></h2>
+      <p>Schedule your free in-home consultation today. Serving Greater Los Angeles and the San Fernando Valley.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-filled">Get a Free Estimate</a>
+        <a href="tel:3109226623" class="btn" style="border-color:rgba(245,240,232,0.5); color:var(--warm-white)">310.922.6623</a>
+      </div>
+    </div>
+  </section>
+
 </Layout>
+
+<style>
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--charcoal);
+}
+.hero-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #3a3530 50%, #2a2520 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(44,44,44,0.85) 0%, rgba(44,44,44,0.4) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.hero-content h1 {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  color: var(--warm-white);
+  margin: 0.5rem 0 1.5rem;
+  font-weight: 300;
+}
+.hero-content h1 em {
+  font-style: italic;
+  color: var(--brass-light);
+}
+.hero-sub {
+  font-size: 1rem;
+  color: rgba(245,240,232,0.75);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(245,240,232,0.4);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(184,149,42,0.6), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+/* INTRO */
+.intro { padding: 7rem 0; background: var(--warm-white); }
+.intro-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.intro-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.intro-text p { font-size: 0.95rem; color: var(--charcoal-light); }
+.intro-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.5rem;
+  border: 1px solid var(--warm-white-2);
+  background: var(--warm-white-2);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--brass);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--charcoal-light);
+}
+.intro-image {
+  grid-column: span 2;
+  height: 220px;
+  overflow: hidden;
+}
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.intro-image:hover img {
+  transform: scale(1.03);
+}
+
+/* SERVICES PREVIEW */
+.services-preview {
+  padding: 6rem 0;
+  background: var(--warm-white-2);
+}
+.section-header {
+  margin-bottom: 3.5rem;
+}
+.section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--warm-white);
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); }
+.service-img {
+  height: 240px;
+  overflow: hidden;
+}
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.service-card:hover .service-img img {
+  transform: scale(1.04);
+}
+.service-body { padding: 1.75rem; }
+.service-body h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+.service-body p {
+  font-size: 0.88rem;
+  color: var(--charcoal-light);
+  margin-bottom: 1rem;
+}
+.card-link {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+  transition: letter-spacing 0.2s;
+}
+.card-link:hover { letter-spacing: 0.18em; }
+
+/* PORTFOLIO TEASER */
+.portfolio-teaser { padding: 6rem 0; }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 220px);
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.portfolio-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.portfolio-item:hover img {
+  transform: scale(1.04);
+}
+.portfolio-item:hover .port-img-placeholder { transform: scale(1.03); }
+.port-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(44,44,44,0.8), transparent);
+  padding: 1.5rem 1.25rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+.portfolio-item:hover .port-overlay { transform: translateY(0); }
+.port-overlay span {
+  color: var(--warm-white);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+.portfolio-cta { text-align: center; margin-top: 1rem; }
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 6rem 0;
+  background: var(--warm-white-2);
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: var(--warm-white);
+  padding: 2.5rem;
+  border-top: 2px solid var(--brass);
+}
+.stars {
+  color: var(--brass);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+.testimonial-card p {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--charcoal-light);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+.testimonial-author {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 500;
+}
+
+/* CTA BANNER */
+.cta-banner {
+  background: var(--charcoal);
+  padding: 7rem 0;
+  text-align: center;
+}
+.cta-content h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--warm-white);
+  margin: 0.5rem 0 1.5rem;
+}
+.cta-content h2 em { color: var(--brass-light); font-style: italic; }
+.cta-content p {
+  color: rgba(245,240,232,0.6);
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .intro-inner, .services-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .portfolio-item.large { grid-column: span 2; grid-row: span 1; height: 280px; }
+}
+@media (max-width: 560px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-item.large { grid-column: span 1; height: 220px; }
+  .hero-actions { flex-direction: column; }
+}
+</style>
