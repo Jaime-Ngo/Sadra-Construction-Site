@@ -125,7 +125,6 @@ const photoProjects = [
 
 <Layout title="Portfolio" description="Before and after kitchen, bathroom, and construction projects by Sadra Construction in Los Angeles.">
 
-  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="page-hero-overlay"></div>
@@ -136,7 +135,7 @@ const photoProjects = [
     </div>
   </section>
 
-  <!-- BEFORE & AFTER -->
+
   <section class="ba-section">
     <div class="container">
       <div class="section-header">
@@ -176,7 +175,7 @@ const photoProjects = [
     </div>
   </section>
 
-  <!-- COMPLETED WORK GALLERY -->
+
   <section class="gallery-section">
     <div class="container">
       <div class="section-header">
@@ -202,7 +201,7 @@ const photoProjects = [
     </div>
   </section>
 
-  <!-- CTA -->
+
   <section class="cta-banner">
     <div class="cta-content container">
       <p class="section-label" style="color:var(--brass-light); text-align:center">Your Project Awaits</p>
@@ -215,7 +214,7 @@ const photoProjects = [
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
+
 <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose">✕</button>
     <button class="lightbox-prev" id="lightboxPrev">‹</button>
@@ -404,7 +403,6 @@ const photoProjects = [
 </Layout>
 
 <style>
-/* HERO */
 .page-hero {
   position: relative;
   height: 55vh;
@@ -437,7 +435,6 @@ const photoProjects = [
   font-size: 1rem;
 }
 
-/* SECTION HEADERS */
 .section-header {
   margin-bottom: 3.5rem;
 }
@@ -451,7 +448,6 @@ const photoProjects = [
   max-width: 560px;
 }
 
-/* BEFORE & AFTER SECTION */
 .ba-section {
   padding: 7rem 0;
   background: var(--warm-white);
@@ -565,7 +561,6 @@ const photoProjects = [
   line-height: 1.7;
 }
 
-/* PHOTO GALLERY */
 .gallery-section {
   padding: 7rem 0;
   background: var(--warm-white-2);
@@ -576,7 +571,6 @@ const photoProjects = [
   grid-auto-rows: 320px;
   gap: 1rem;
 }
-/* Make some cards taller for visual interest */
 .photo-card:nth-child(1),
 .photo-card:nth-child(6),
 .photo-card:nth-child(9) {
@@ -635,7 +629,6 @@ const photoProjects = [
   color: rgba(245,240,232,0.6);
 }
 
-/* CTA */
 .cta-banner {
   background: var(--charcoal);
   padding: 7rem 0;
@@ -660,7 +653,6 @@ const photoProjects = [
   flex-wrap: wrap;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);

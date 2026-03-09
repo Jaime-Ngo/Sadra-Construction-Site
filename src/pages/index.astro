@@ -4,10 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Home">
 
-  <!-- HERO -->
+
   <section class="hero">
     <div class="hero-bg">
-      <!-- Replace with: <img src="/images/hero-kitchen.jpg" alt="Luxury kitchen remodel" /> -->
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content container">
@@ -25,7 +24,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- INTRO -->
   <section class="intro">
     <div class="intro-inner container">
       <div class="intro-text">
@@ -56,7 +54,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-<!-- SERVICES PREVIEW -->
 <section class="services-preview">
 	<div class="container">
 	  <div class="section-header">
@@ -98,7 +95,6 @@ import Layout from '../layouts/Layout.astro';
 	</div>
   </section>
 
-  <!-- PORTFOLIO TEASER -->
 
 <section class="portfolio-teaser">
 	<div class="container">
@@ -129,7 +125,6 @@ import Layout from '../layouts/Layout.astro';
 	</div>
   </section>
 
-  <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="container">
       <p class="section-label" style="text-align:center">What Our Clients Say</p>
@@ -154,7 +149,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="cta-content container">
       <p class="section-label" style="color:var(--brass-light)">Ready to Begin?</p>
@@ -170,7 +164,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-/* HERO */
 .hero {
   position: relative;
   height: 100vh;
@@ -247,7 +240,6 @@ import Layout from '../layouts/Layout.astro';
   50% { opacity: 1; transform: scaleY(1.2); }
 }
 
-/* INTRO */
 .intro { padding: 7rem 0; background: var(--warm-white); }
 .intro-inner {
   display: grid;
@@ -299,7 +291,6 @@ import Layout from '../layouts/Layout.astro';
   transform: scale(1.03);
 }
 
-/* SERVICES PREVIEW */
 .services-preview {
   padding: 6rem 0;
   background: var(--warm-white-2);
@@ -351,7 +342,7 @@ import Layout from '../layouts/Layout.astro';
 }
 .card-link:hover { letter-spacing: 0.18em; }
 
-/* PORTFOLIO TEASER */
+
 .portfolio-teaser { padding: 6rem 0; }
 .portfolio-grid {
   display: grid;
@@ -398,7 +389,6 @@ import Layout from '../layouts/Layout.astro';
 }
 .portfolio-cta { text-align: center; margin-top: 1rem; }
 
-/* TESTIMONIALS */
 .testimonials {
   padding: 6rem 0;
   background: var(--warm-white-2);
@@ -435,7 +425,6 @@ import Layout from '../layouts/Layout.astro';
   font-weight: 500;
 }
 
-/* CTA BANNER */
 .cta-banner {
   background: var(--charcoal);
   padding: 7rem 0;
@@ -454,7 +443,6 @@ import Layout from '../layouts/Layout.astro';
 }
 .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .intro-inner, .services-grid, .testimonial-grid { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
