@@ -5,8 +5,11 @@
     <div class="footer-top container">
       <div class="footer-brand">
         <div class="logo">
-          <span class="logo-main">Sadra</span>
-          <span class="logo-sub">Construction</span>
+          <img src="/logo-footer.png" alt="Sadra Construction" class="logo-mark" />
+          <div class="logo-text">
+            <span class="logo-main">Sadra</span>
+            <span class="logo-sub">Construction</span>
+          </div>
         </div>
         <p class="tagline">Refined craftsmanship for<br/>discerning homeowners.</p>
       </div>
@@ -54,7 +57,22 @@
     gap: 3rem;
     padding: 5rem 2rem 4rem;
   }
-  .footer-brand .logo { margin-bottom: 1.2rem; }
+  .footer-brand .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+  .footer-brand .logo-mark {
+    height: 48px;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+  }
+  .footer-brand .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
   .footer-brand .logo-main {
     font-family: var(--font-display);
     font-size: 1.8rem;

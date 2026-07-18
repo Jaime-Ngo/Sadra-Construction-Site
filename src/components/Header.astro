@@ -11,8 +11,11 @@ const currentPath = Astro.url.pathname;
 <header class="site-header">
   <div class="header-inner container">
     <a href="/" class="logo">
-      <span class="logo-main">Sadra</span>
-      <span class="logo-sub">Construction</span>
+      <img src="/logo.png" alt="Sadra Construction" class="logo-mark" />
+      <span class="logo-text">
+        <span class="logo-main">Sadra</span>
+        <span class="logo-sub">Construction</span>
+      </span>
     </a>
 
     <nav class="nav-desktop">
@@ -60,8 +63,18 @@ const currentPath = Astro.url.pathname;
 }
 .logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   line-height: 1;
+}
+.logo-mark {
+  height: 58px;
+  width: auto;
+  flex-shrink: 0;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
 }
 .logo-main {
   font-family: var(--font-display);
@@ -149,6 +162,8 @@ const currentPath = Astro.url.pathname;
 @media (max-width: 768px) {
   .nav-desktop { display: none; }
   .nav-toggle { display: flex; }
+  .logo-mark { height: 46px; }
+  .logo-main { font-size: 1.35rem; }
 }
 </style>
 
